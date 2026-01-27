@@ -11,6 +11,7 @@
 2. Web server ↔ Database
 3. Web server ↔ Email service
 
+
 ## Threats & Mitigations
 
 ### Threat: Email Link Tampering
