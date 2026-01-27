@@ -1,0 +1,21 @@
+## POST /subscriptions
+
+**Authentication**: Required (session cookie)
+
+**Request Body**:
+{
+  "product_name": "string (required, 1-200 chars)",
+  "next_billing_date": "date (required, must be future)",
+  ...
+}
+
+**Security Considerations**:
+- Input validation on all fields
+- CSRF token required
+- Rate limit: 10 requests per minute per user
+
+**Response Codes**:
+- 201: Created
+- 400: Validation error
+- 401: Not authenticated
+- 429: Rate limit exceeded
